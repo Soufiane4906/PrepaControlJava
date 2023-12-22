@@ -58,27 +58,24 @@ public class Manager extends Person {
         return e1;
     }
 
-    public Employee worstEmployee(){
+    public List<Employee> worstEmployee(){
         Iterator<Employee> it = employees.iterator();
-        Employee e1 =it.next();
+        List<Employee> Worst=new ArrayList<>();
+
         while(it.hasNext()){
-            Employee e2 = it.next();
-            if(e1.isBetterThan(e2)){
-                e1 = e2;
+            Employee e1 = it.next();
+           if(e1.getPerformance()< e1.getObjective()){
+             Worst.add(e1);
             }
+
         }
-        return e1;
+        return Worst;
     }
 
-
-
-
-
-
-        }
-
-
-
-
-
 }
+
+
+
+
+
+
