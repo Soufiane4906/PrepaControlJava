@@ -8,7 +8,7 @@ public class Main {
         pairList.add(new Pair<>(1, "A"));
         pairList.add(new Pair<>(2, "B"));
         pairList.add(new Pair<>(4, "D"));
-        pairList.add(new Pair<>(3, "C"));
+        pairList.add(new Pair<>(3, "CC"));
 
         pairList.sort(Comparator.comparing(Pair::getKey));
         String message = "";
